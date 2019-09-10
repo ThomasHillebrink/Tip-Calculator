@@ -1,0 +1,178 @@
+html {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: url(restaurant-table-interior-modern-style-free-stock-photos-images-hd-wallpaper.jpg)  no-repeat center center fixed;
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-family: 'CaladeaRegular'; 
+}
+h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'CaladeaRegular'; 
+    font-size: 20px;
+}
+h3 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'CaladeaRegular'; 
+    font-size: 15px;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'CaladeaRegular'; 
+    font-size: 15px;
+    color: grey
+}
+.wrapper {
+    background-color: white;
+    width: 300px;
+    margin: 50px auto;
+    overflow: hidden;
+    height: 700px;
+    box-shadow: 5px 5px 5px black;
+}
+
+/* Head */
+
+#Logo {
+    margin: 20px;
+    border-bottom: 2px solid rgb(156, 153, 153);
+}
+
+#adress {
+    text-align: center;
+}
+
+/* order Information */
+#Data {
+    display: grid; 
+    margin: 20px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "order tableNum"
+    "eatIn  Time"
+    "Server Date";
+}
+#order {
+    grid-area: order;
+}
+#tableNum {
+    grid-area: tableNum;
+    text-align: right;
+}
+#eatIn {
+    grid-area: eatIn;
+}
+#Time {
+    grid-area: Time;
+    text-align: right;
+}
+#Server {
+    grid-area: Server;
+}
+#Date {
+    grid-area: Date;
+    text-align: right;
+}
+
+/* Order breakdown */
+
+#orderInfo {
+    display: grid; 
+
+    margin: 30px 20px 20px 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 50px;
+    grid-template-areas: 
+    "appetizer appetizerCost"
+    "mainCourse  mainCourseCost"
+    "dessert dessertCost";
+}
+
+#appetizer{
+    grid-area: appetizer;
+    margin: 5px;
+}
+
+#appetizerCost {
+    grid-area: appetizerCost;
+    width: 50px;
+    margin: 5px;
+}
+#mainCourse {
+    grid-area: mainCourse;
+    margin: 5px;
+}
+#mainCourseCost{
+    grid-area: mainCourseCost;
+    width: 50px;
+    margin: 5px;
+}
+
+#dessert {
+grid-area: dessert;
+margin: 5px;
+}
+
+#dessertCost{
+    grid-area: dessertCost;
+    width: 50px;
+    margin: 5px;
+}
+hr {
+    width: 25%;
+    margin-top: 20px; 
+    margin-right: 10px;
+    border: 1px dashed grey;
+    }
+    
+/* Totals */
+#totals {
+    display: grid;
+    margin: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 50px;
+    text-align: right;
+}
+#subTotal {
+text-align: right;
+}
+#subTotalNum {
+
+}
+#Tax {
+
+}
+#taxNum {
+
+}
+#Tip {
+
+}
+#tipInput {
+    width: 50px;
+}
+#TipNum {
+    
+}
+#Total {
+font-size: 20px;
+font-weight: bold;
+}
+#totalNum {
+
+}
+
+
+
+
