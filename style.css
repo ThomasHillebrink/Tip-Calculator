@@ -35,9 +35,14 @@ p {
 .wrapper {
     background-color: white;
     width: 300px;
-    margin: 50px auto;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
     overflow: hidden;
-    height: 700px;
+    height: 550px;
     box-shadow: 5px 5px 5px black;
 }
 
@@ -160,7 +165,7 @@ text-align: right;
 
 }
 #tipInput {
-    width: 50px;
+    width: 15px;
 }
 #TipNum {
     
