@@ -27,7 +27,13 @@ randomTable = Math.floor(Math.random() * 100);
 tableNumber = document.getElementById('tableNum')
 tableNumber.innerHTML = "Tbl#" + randomTable
 
+window.onload = function() {
+    appetizer.value = '00.00';
+    mainCourse.value = '00.00';
+    dessert.value = '00.00';
 
+
+    }
 
 function Price() {
     let tipTotal = parseFloat(tipInput.value);
