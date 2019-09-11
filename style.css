@@ -3,44 +3,50 @@ html {
     margin: 0px;
     padding: 0px;
 }
+
 body {
-    background: url(restaurant-table-interior-modern-style-free-stock-photos-images-hd-wallpaper.jpg)  no-repeat center center fixed;
+    background: url(restaurant-table-interior-modern-style-free-stock-photos-images-hd-wallpaper.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+
 h1 {
     text-align: center;
-    font-family: 'CaladeaRegular'; 
+    font-family: 'CaladeaRegular';
 }
+
 h2 {
     text-align: center;
     margin: 0px;
     padding: 0px;
-    font-family: 'CaladeaRegular'; 
+    font-family: 'CaladeaRegular';
     font-size: 20px;
 }
+
 h3 {
     text-align: center;
     margin: 0px;
     padding: 0px;
-    font-family: 'CaladeaRegular'; 
+    font-family: 'CaladeaRegular';
     font-size: 15px;
 }
+
 p {
     margin: 0px;
     padding: 0px;
-    font-family: 'CaladeaRegular'; 
+    font-family: 'CaladeaRegular';
     font-size: 15px;
     color: grey
 }
+
 .wrapper {
     background-color: white;
     width: 300px;
     position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     overflow: hidden;
     height: 550px;
     box-shadow: 5px 5px 5px black;
@@ -59,32 +65,38 @@ p {
 
 /* order Information */
 #Data {
-    display: grid; 
+    display: grid;
     margin: 20px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "order tableNum"
-    "eatIn  Time"
-    "Server Date";
+    grid-template-areas:
+        "order tableNum"
+        "eatIn  Time"
+        "Server Date";
 }
+
 #order {
     grid-area: order;
 }
+
 #tableNum {
     grid-area: tableNum;
     text-align: right;
 }
+
 #eatIn {
     grid-area: eatIn;
 }
+
 #Time {
     grid-area: Time;
     text-align: right;
 }
+
 #Server {
     grid-area: Server;
 }
+
 #Date {
     grid-area: Date;
     text-align: right;
@@ -93,54 +105,60 @@ p {
 /* Order breakdown */
 
 #orderInfo {
-    display: grid; 
+    display: grid;
 
     margin: 30px 20px 20px 10px;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 50px;
-    grid-template-areas: 
-    "appetizer appetizerCost"
-    "mainCourse  mainCourseCost"
-    "dessert dessertCost";
+    grid-template-columns: 1fr 60px;
+    grid-template-areas:
+        "appetizer appetizerCost"
+        "mainCourse  mainCourseCost"
+        "dessert dessertCost";
 }
 
-#appetizer{
+#appetizer {
     grid-area: appetizer;
     margin: 5px;
 }
 
 #appetizerCost {
     grid-area: appetizerCost;
-    width: 50px;
+    width: 60px;
     margin: 5px;
+    text-align: right;
 }
+
 #mainCourse {
     grid-area: mainCourse;
     margin: 5px;
 }
-#mainCourseCost{
+
+#mainCourseCost {
     grid-area: mainCourseCost;
-    width: 50px;
+    width: 60px;
     margin: 5px;
+    text-align: right;
 }
 
 #dessert {
-grid-area: dessert;
-margin: 5px;
-}
-
-#dessertCost{
-    grid-area: dessertCost;
-    width: 50px;
+    grid-area: dessert;
     margin: 5px;
 }
+
+#dessertCost {
+    grid-area: dessertCost;
+    width: 60px;
+    margin: 5px;
+    text-align: right;
+}
+
 hr {
     width: 25%;
-    margin-top: 20px; 
+    margin-top: 20px;
     margin-right: 10px;
     border: 1px dashed grey;
-    }
-    
+}
+
 /* Totals */
 #totals {
     display: grid;
@@ -149,35 +167,33 @@ hr {
     grid-template-columns: 1fr 50px;
     text-align: right;
 }
+
 #subTotal {
-text-align: right;
+    text-align: right;
+    padding-right: 10px;
 }
-#subTotalNum {
 
-}
+#subTotalNum {}
+
 #Tax {
-
+    padding-right: 10px; 
 }
-#taxNum {
 
-}
+#taxNum {}
+
 #Tip {
-
+    padding-right: 10px;
 }
+
 #tipInput {
     width: 15px;
 }
-#TipNum {
-    
-}
+
+#TipNum {}
+
 #Total {
-font-size: 20px;
-font-weight: bold;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
-#totalNum {
-
-}
-
-
-
-
+#totalNum {}
