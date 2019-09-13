@@ -9,8 +9,8 @@ const tipNum = document.getElementById('tipNum')
 const taxNum = document.getElementById('taxNum')
 const totalNum = document.getElementById('totalNum')
 
-let today = new Date(); 
-let date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+let today = new Date();
+let date = today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear();
 var time = today.getHours() + ":" + today.getMinutes()
 
 
@@ -38,9 +38,6 @@ function Price() {
     let dessertCost = parseFloat(dessert.value)
 
 
-
-console.log(appetizerCost + mainCourseCost + dessertCost)
-
     let subtotalCost = appetizerCost + mainCourseCost + dessertCost + drinksCost
     let subtotalCostRounded = subtotalCost.toFixed(2);
     subTotal.innerHTML = "€" + subtotalCostRounded;
@@ -49,14 +46,12 @@ console.log(appetizerCost + mainCourseCost + dessertCost)
     let withTaxRounded = withTax.toFixed(2);
     taxNum.innerHTML = "€" + withTaxRounded;
 
-    let tip = ((tipTotal / 100) * subtotalCost )
-    console.log(typeof tip)
+    let tip = ((tipTotal / 100) * subtotalCost)
     let tipRounded = tip.toFixed(2);
     tipNum.innerHTML = "€" + tipRounded;
 
     let total = (subtotalCost + withTax + tip);
     totalRounded = total.toFixed(2);
-    console.log(total);
     totalNum.innerHTML = "€" + totalRounded;
 };
 appetizer.addEventListener('input', Price);
@@ -66,11 +61,11 @@ drinks.addEventListener('input', Price);
 tipInput.addEventListener('input', Price);
 
 
-window.onload = function() {
+window.onload = function () {
     appetizer.value = '14.99';
     mainCourse.value = '29.99';
     dessert.value = '9.99';
     drinks.value = '15.96';
     Price();
 
-    }
+}
