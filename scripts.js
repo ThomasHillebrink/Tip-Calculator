@@ -1,6 +1,7 @@
 const appetizer = document.getElementById('appetizerCost')
 const mainCourse = document.getElementById('mainCourseCost')
 const dessert = document.getElementById('dessertCost')
+const drinks = document.getElementById('drinkCost')
 
 const subTotal = document.getElementById('subTotalNum')
 const tipInput = document.getElementById('tipInput')
@@ -27,25 +28,20 @@ randomTable = Math.floor(Math.random() * 100);
 tableNumber = document.getElementById('tableNum')
 tableNumber.innerHTML = "Tbl#" + randomTable
 
-window.onload = function() {
-    appetizer.value = '00.00';
-    mainCourse.value = '00.00';
-    dessert.value = '00.00';
 
-
-    }
 
 function Price() {
     let tipTotal = parseFloat(tipInput.value)
     let appetizerCost = parseFloat(appetizer.value)
     let mainCourseCost = parseFloat(mainCourse.value)
+    let drinksCost = parseFloat(drinks.value)
     let dessertCost = parseFloat(dessert.value)
 
 
 
 console.log(appetizerCost + mainCourseCost + dessertCost)
 
-    let subtotalCost = appetizerCost + mainCourseCost + dessertCost
+    let subtotalCost = appetizerCost + mainCourseCost + dessertCost + drinksCost
     let subtotalCostRounded = subtotalCost.toFixed(2);
     subTotal.innerHTML = "€" + subtotalCostRounded;
 
@@ -63,8 +59,18 @@ console.log(appetizerCost + mainCourseCost + dessertCost)
     console.log(total);
     totalNum.innerHTML = "€" + totalRounded;
 };
-
 appetizer.addEventListener('input', Price);
 mainCourse.addEventListener('input', Price);
 dessert.addEventListener('input', Price);
+drinks.addEventListener('input', Price);
 tipInput.addEventListener('input', Price);
+
+
+window.onload = function() {
+    appetizer.value = '14.99';
+    mainCourse.value = '29.99';
+    dessert.value = '9.99';
+    drinks.value = '15.96';
+    Price();
+
+    }

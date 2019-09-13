@@ -108,12 +108,13 @@ p {
     display: grid;
 
     margin: 30px 20px 20px 10px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 60px;
     grid-template-areas:
         "appetizer appetizerCost"
         "mainCourse  mainCourseCost"
-        "dessert dessertCost";
+        "dessert dessertCost"
+        "drink drinkCost";
 }
 
 #appetizer {
@@ -147,6 +148,17 @@ p {
 
 #dessertCost {
     grid-area: dessertCost;
+    width: 60px;
+    margin: 5px;
+    text-align: right;
+}
+#drink {
+    grid-area: drink;
+    margin: 5px;
+}
+
+#drinkCost {
+    grid-area: drinkCost;
     width: 60px;
     margin: 5px;
     text-align: right;
