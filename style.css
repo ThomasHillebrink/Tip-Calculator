@@ -37,6 +37,10 @@ p {
     font-size: 15px;
     color: grey
 }
+input:before {
+    content: "$";
+    position: absolute;
+  }
 
 .wrapper {
     background-color: white;
@@ -55,7 +59,8 @@ p {
 /* Head */
 
 #Logo {
-    margin: 20px;
+    margin: 10px auto;
+    width: 100%;
     border-bottom: 2px solid rgb(156, 153, 153);
 }
 
