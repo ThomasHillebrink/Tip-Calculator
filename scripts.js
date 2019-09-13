@@ -36,22 +36,32 @@ window.onload = function() {
     }
 
 function Price() {
-    let tipTotal = parseFloat(tipInput.value);
+    let tipTotal = parseFloat(tipInput.value)
     let appetizerCost = parseFloat(appetizer.value)
     let mainCourseCost = parseFloat(mainCourse.value)
     let dessertCost = parseFloat(dessert.value)
 
-    let subtotalCost = (appetizerCost + mainCourseCost + dessertCost).toFixed(2);
-    subTotal.innerHTML = "€" + subtotalCost;
 
-    let withTax = (subtotalCost * 0.14).toFixed(2);
-    taxNum.innerHTML = "€" + withTax;
 
-    let tip = (withTax * (tipTotal / 100)).toFixed(2);
-    tipNum.innerHTML = "€" + tip;
+console.log(appetizerCost + mainCourseCost + dessertCost)
 
-    let total = parseFloat(subtotalCost + withTax + tip).toFixed(2);
-    totalNum.innerHTML = "€" + total;
+    let subtotalCost = appetizerCost + mainCourseCost + dessertCost
+    let subtotalCostRounded = subtotalCost.toFixed(2);
+    subTotal.innerHTML = "€" + subtotalCostRounded;
+
+    let withTax = subtotalCost * 0.14
+    let withTaxRounded = withTax.toFixed(2);
+    taxNum.innerHTML = "€" + withTaxRounded;
+
+    let tip = ((tipTotal / 100) * subtotalCost )
+    console.log(typeof tip)
+    let tipRounded = tip.toFixed(2);
+    tipNum.innerHTML = "€" + tipRounded;
+
+    let total = (subtotalCost + withTax + tip);
+    totalRounded = total.toFixed(2);
+    console.log(total);
+    totalNum.innerHTML = "€" + totalRounded;
 };
 
 appetizer.addEventListener('input', Price);
