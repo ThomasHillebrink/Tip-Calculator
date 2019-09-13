@@ -68,4 +68,4 @@ window.onload = function () {
     drinks.value = '15.96';
     Price();
 
-}
+};
