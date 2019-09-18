@@ -39,20 +39,16 @@ function Price() {
 
 
     let subtotalCost = appetizerCost + mainCourseCost + dessertCost + drinksCost
-    let subtotalCostRounded = subtotalCost.toFixed(2);
-    subTotal.innerHTML = "€" + subtotalCostRounded;
+    subTotal.innerHTML = "€" + subtotalCost.toFixed(2);
 
     let withTax = subtotalCost * 0.14
-    let withTaxRounded = withTax.toFixed(2);
-    taxNum.innerHTML = "€" + withTaxRounded;
+    taxNum.innerHTML = "€" + withTax.toFixed(2);
 
     let tip = ((tipTotal / 100) * subtotalCost)
-    let tipRounded = tip.toFixed(2);
-    tipNum.innerHTML = "€" + tipRounded;
+    tipNum.innerHTML = "€" + tip.toFixed(2);
 
     let total = (subtotalCost + withTax + tip);
-    totalRounded = total.toFixed(2);
-    totalNum.innerHTML = "€" + totalRounded;
+    totalNum.innerHTML = "€" + total.toFixed(2);
 };
 appetizer.addEventListener('input', Price);
 mainCourse.addEventListener('input', Price);
