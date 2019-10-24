@@ -11,7 +11,7 @@ const totalNum = document.getElementById('totalNum')
 
 let today = new Date();
 let date = today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear();
-var time = today.getHours() + ":" + today.getMinutes()
+let time = today.getHours() + ":" + today.getMinutes()
 
 
 currentTime = document.getElementById('Time')
@@ -27,8 +27,6 @@ ordernumber.innerHTML = "Ord#" + randomOrder
 randomTable = Math.floor(Math.random() * 100);
 tableNumber = document.getElementById('tableNum')
 tableNumber.innerHTML = "Tbl#" + randomTable
-
-
 
 function Price() {
     let tipTotal = parseFloat(tipInput.value)
@@ -50,6 +48,7 @@ function Price() {
     let total = (subtotalCost + withTax + tip);
     totalNum.innerHTML = "€" + total.toFixed(2);
 };
+
 appetizer.addEventListener('input', Price);
 mainCourse.addEventListener('input', Price);
 dessert.addEventListener('input', Price);
@@ -57,7 +56,7 @@ drinks.addEventListener('input', Price);
 tipInput.addEventListener('input', Price);
 
 
-window.onload = function () {
+window.onload = () => {
     appetizer.value = '14.99';
     mainCourse.value = '29.99';
     dessert.value = '9.99';
